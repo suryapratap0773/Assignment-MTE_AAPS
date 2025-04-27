@@ -1,0 +1,22 @@
+// 19. Check if a given string is a palindrome.
+
+class CheckPalindrome {
+    public static void main(String[] args) {
+        String str = "racecar";
+        int left = 0, right = str.length() - 1;
+        boolean isPalindrome = true;
+        
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        
+        System.out.println("Is palindrome: " + isPalindrome);
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(1)
