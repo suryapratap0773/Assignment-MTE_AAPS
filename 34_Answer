@@ -1,0 +1,23 @@
+// 34. Solve the problem of finding the subarray sum equal to K using hashing.
+
+import java.util.*;
+
+class SubarraySumEqualsK {
+    public static void main(String[] args) {
+        int[] nums = {1,2,3};
+        int k = 3;
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        int sum = 0, count = 0;
+        
+        for (int num : nums) {
+            sum += num;
+            count += map.getOrDefault(sum - k, 0);
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+        
+        System.out.println("Total subarrays: " + count);
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(N)
