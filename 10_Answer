@@ -1,0 +1,6 @@
+// 10. Explain the concept of two-pointer technique and its application in array problems.
+
+// Answer:
+// Two-pointer technique uses two indices to solve problems by traversing arrays from different directions.
+// It is helpful in finding pairs, partitioning arrays, and optimizing searches. 
+// Common in sorted arrays and string problems.
