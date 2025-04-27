@@ -1,0 +1,6 @@
+// 33. Explain the sliding window technique and its applications in array problems.
+
+// Answer:
+// The sliding window technique optimizes nested loops into a single loop by maintaining a window of elements.
+// Applications include finding maximum/minimum/average/sum of subarrays, longest substring without repeating characters, etc.
+// It reduces time complexity from O(N^2) to O(N).
