@@ -1,0 +1,43 @@
+// 49. How to find the intersection of two linked lists.
+
+class LinkedListIntersection {
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+    
+    public static void main(String[] args) {
+        ListNode headA = new ListNode(4);
+        headA.next = new ListNode(1);
+        headA.next.next = new ListNode(8);
+        headA.next.next.next = new ListNode(4);
+        headA.next.next.next.next = new ListNode(5);
+        
+        ListNode headB = new ListNode(5);
+        headB.next = new ListNode(6);
+        headB.next.next = new ListNode(1);
+        headB.next.next.next = headA.next.next;
+        
+        ListNode intersection = getIntersectionNode(headA, headB);
+        System.out.println(intersection != null ? "Intersection at: " + intersection.val : "No intersection");
+    }
+    
+    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) return null;
+        
+        ListNode pointerA = headA;
+        ListNode pointerB = headB;
+        
+        while (pointerA != pointerB) {
+            pointerA = (pointerA == null) ? headB : pointerA.next;
+            pointerB = (pointerB == null) ? headA : pointerB.next;
+        }
+        
+        return pointerA;
+    }
+}
+// Time Complexity: O(N + M)
+// Space Complexity: O(1)
