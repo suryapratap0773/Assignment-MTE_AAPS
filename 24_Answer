@@ -1,0 +1,20 @@
+// 24. Move all zeroes to the end of an array without changing the order of non-zero elements.
+
+class MoveZeroes {
+    public static void main(String[] args) {
+        int[] nums = {0, 1, 0, 3, 12};
+        int index = 0;
+        
+        for (int num : nums) {
+            if (num != 0) nums[index++] = num;
+        }
+        
+        while (index < nums.length) {
+            nums[index++] = 0;
+        }
+        
+        for (int num : nums) System.out.print(num + " ");
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(1)
