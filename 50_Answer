@@ -1,0 +1,8 @@
+// 50. Explain the concept of equilibrium index and its applications in array problems.
+
+// Answer:
+// An equilibrium index in an array is an index where the sum of elements on the left side is equal to the sum of elements on the right side.
+// Applications include:
+// - Balance point in arrays
+// - Equal division of resources or load in distributed systems
+// Algorithm: Iterate through the array calculating left and right sums at each index and comparing them.
