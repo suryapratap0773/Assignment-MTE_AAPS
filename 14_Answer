@@ -1,0 +1,16 @@
+// 14. Find the missing number in an array containing n distinct numbers taken from 0, 1, 2, ..., n.
+
+class MissingNumber {
+    public static void main(String[] args) {
+        int[] nums = {3, 0, 1};
+        int n = nums.length;
+        int expectedSum = n * (n + 1) / 2;
+        int actualSum = 0;
+        
+        for (int num : nums) actualSum += num;
+        
+        System.out.println("Missing number: " + (expectedSum - actualSum));
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(1)
