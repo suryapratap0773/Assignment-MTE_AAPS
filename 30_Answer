@@ -1,0 +1,6 @@
+// 30. Merge two sorted arrays without using extra space.
+
+// Answer:
+// We can use the Gap method (Shell sort concept).
+// Initialize gap = (m+n)/2 and compare elements at gap distance, reducing gap until it becomes 0.
+// This will rearrange elements in-place without extra space.
