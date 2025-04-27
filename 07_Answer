@@ -1,0 +1,4 @@
+// 7. Explain the sliding window technique and its use in string problems.
+// Answer:
+// Sliding window is a technique where a window (range of elements) is maintained and moved through the array or string to optimize computation.
+// Used for problems like longest substring without repeating characters, maximum sum subarray, etc.
