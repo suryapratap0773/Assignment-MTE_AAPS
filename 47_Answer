@@ -1,0 +1,8 @@
+// 47. Explain the concept of histogram problems and their applications in algorithm design.
+
+// Answer:
+// Histogram problems involve arrays or sequences that represent vertical bars, and the task is to find areas or patterns in these bars.
+// Applications include:
+// - Finding the largest rectangle in a histogram
+// - Solving problems like rainwater trapping between bars
+// - Dynamic programming approaches for max area calculation
