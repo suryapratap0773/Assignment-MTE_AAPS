@@ -1,0 +1,18 @@
+// 15. Find the duplicate number in an array where each element appears once except one.
+
+class FindDuplicateNumber {
+    public static void main(String[] args) {
+        int[] nums = {1, 3, 4, 2, 2};
+        java.util.Set<Integer> seen = new java.util.HashSet<>();
+        
+        for (int num : nums) {
+            if (seen.contains(num)) {
+                System.out.println("Duplicate number: " + num);
+                return;
+            }
+            seen.add(num);
+        }
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(N)
