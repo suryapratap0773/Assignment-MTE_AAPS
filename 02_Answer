@@ -1,0 +1,16 @@
+// 2. Write a program to find the sum of elements in a given range [L, R] using a prefix sum array.
+class PrefixSumRangeQuery {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int[] prefixSum = new int[arr.length];
+        prefixSum[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            prefixSum[i] = prefixSum[i-1] + arr[i];
+        }
+        int L = 1, R = 3;
+        int rangeSum = prefixSum[R] - (L > 0 ? prefixSum[L-1] : 0);
+        System.out.println("Sum from index " + L + " to " + R + " is " + rangeSum);
+    }
+}
+// Time Complexity: O(N) preprocessing, O(1) query
+// Space Complexity: O(N)
