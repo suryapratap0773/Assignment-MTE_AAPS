@@ -1,0 +1,20 @@
+// 25. Find the intersection of two arrays (unique elements).
+
+class IntersectionOfArrays {
+    public static void main(String[] args) {
+        int[] nums1 = {1, 2, 2, 1};
+        int[] nums2 = {2, 2};
+        
+        java.util.Set<Integer> set1 = new java.util.HashSet<>();
+        java.util.Set<Integer> set2 = new java.util.HashSet<>();
+        
+        for (int num : nums1) set1.add(num);
+        for (int num : nums2) {
+            if (set1.contains(num)) set2.add(num);
+        }
+        
+        for (int num : set2) System.out.print(num + " ");
+    }
+}
+// Time Complexity: O(N + M)
+// Space Complexity: O(N)
