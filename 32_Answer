@@ -1,0 +1,31 @@
+// 32. Find the largest rectangle that can be formed in a histogram.
+
+import java.util.*;
+
+class LargestRectangleHistogram {
+    public static void main(String[] args) {
+        int[] heights = {2,1,5,6,2,3};
+        Stack<Integer> stack = new Stack<>();
+        int maxArea = 0, i = 0;
+        
+        while (i < heights.length) {
+            if (stack.isEmpty() || heights[i] >= heights[stack.peek()])
+                stack.push(i++);
+            else {
+                int height = heights[stack.pop()];
+                int width = stack.isEmpty() ? i : i - stack.peek() - 1;
+                maxArea = Math.max(maxArea, height * width);
+            }
+        }
+        
+        while (!stack.isEmpty()) {
+            int height = heights[stack.pop()];
+            int width = stack.isEmpty() ? i : i - stack.peek() - 1;
+            maxArea = Math.max(maxArea, height * width);
+        }
+        
+        System.out.println("Max Area: " + maxArea);
+    }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(N)
