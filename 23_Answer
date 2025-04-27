@@ -1,0 +1,5 @@
+// 23. Explain two pointer technique with example.
+
+// Answer:
+// Two pointers is a technique where two pointers are used to iterate through data structures, often from both ends.
+// Example: Finding a pair with a given sum in a sorted array using left and right pointers moving toward each other.
