@@ -1,0 +1,6 @@
+// 43. Explain the two-pointer technique and its use cases.
+
+// Answer:
+// Two pointers are used to traverse an array from two ends or move with different speeds to solve problems efficiently.
+// Use cases: Sorting arrays, finding pairs with a given sum, reversing strings, removing duplicates in-place.
+
