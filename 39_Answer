@@ -1,0 +1,6 @@
+// 39. Explain the monotonic stack and its use cases.
+
+// Answer:
+// A monotonic stack maintains its elements in either strictly increasing or decreasing order.
+// Use cases: Next Greater Element, Stock Span Problem, Largest Rectangle in Histogram, Daily Temperatures.
+// It helps solve problems in linear time by maintaining useful elements in the stack.
