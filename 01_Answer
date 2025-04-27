@@ -1,0 +1,4 @@
+// 1. Explain the concept of a prefix sum array and its applications.
+// Answer:
+// A prefix sum array is an array where each element at index i contains the sum of all elements from index 0 to i in the original array.
+// Applications: Range sum queries, dynamic programming optimizations, histogram problems, etc.
