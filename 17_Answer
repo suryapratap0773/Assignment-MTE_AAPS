@@ -1,0 +1,6 @@
+// 17. Explain the sliding window technique and its use cases.
+
+// Answer:
+// Sliding window technique involves maintaining a subset of elements (window) and moving it over the data.
+// It is useful in problems like finding maximum/minimum sum subarrays, substring problems, etc.
+// It reduces time complexity compared to brute force solutions.
