@@ -1,0 +1,23 @@
+// 8. Find the longest palindromic substring in a given string.
+class LongestPalindromicSubstring {
+    public static void main(String[] args) {
+        String s = "babad";
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            String odd = expandAroundCenter(s, i, i);
+            String even = expandAroundCenter(s, i, i + 1);
+            if (odd.length() > result.length()) result = odd;
+            if (even.length() > result.length()) result = even;
+        }
+        System.out.println("Longest Palindromic Substring: " + result);
+    }
+    
+    private static String expandAroundCenter(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--; right++;
+        }
+        return s.substring(left + 1, right);
+    }
+}
+// Time Complexity: O(N^2)
+// Space Complexity: O(1)
